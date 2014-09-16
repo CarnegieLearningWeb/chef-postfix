@@ -34,9 +34,6 @@ if node['postfix']['main']['smtp_sasl_auth_enable'] == 'yes'
   node.default['postfix']['sasl_password_file'] = "#{node['postfix']['conf_dir']}/sasl_passwd"
   node.default['postfix']['main']['smtp_sasl_password_maps'] = "hash:#{node['postfix']['sasl_password_file']}"
   node.default['postfix']['main']['smtp_sasl_security_options'] = 'noanonymous'
-  node.default['postfix']['sasl']['smtp_sasl_user_name'] = ''
-  node.default['postfix']['sasl']['smtp_sasl_passwd']    = ''
-  node.default['postfix']['main']['relayhost'] = ''
 end
 
 if node['postfix']['use_alias_maps']
