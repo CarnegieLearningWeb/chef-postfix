@@ -4,9 +4,9 @@ description 'Installs and configures postfix for client or outbound relayhost, o
 maintainer 'Chef Software, Inc.'
 maintainer_email 'cookbooks@chef.io'
 license 'Apache 2.0'
-version '3.7.0'
-issues_url 'https://github.com/opscode-cookbooks/postfix/issues'
-source_url 'https://github.com/opscode-cookbooks/postfix'
+version '3.7.1'
+issues_url 'https://github.com/opscode-cookbooks/postfix/issues' if respond_to?(:source_url)
+source_url 'https://github.com/opscode-cookbooks/postfix' if respond_to?(:issues_url)
 recipe 'postfix', 'Installs and configures postfix'
 recipe 'postfix::sasl_auth', 'Set up postfix to auth to a server with sasl'
 recipe 'postfix::aliases', 'Manages /etc/aliases'
